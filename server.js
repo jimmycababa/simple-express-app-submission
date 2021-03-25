@@ -35,6 +35,6 @@ app.get('/api/golfer/:tournamentsWon', (request, response) => {
   response.json(golfer[golfWin])
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Server running on port ${PORT}`);
 })
